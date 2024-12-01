@@ -1,4 +1,3 @@
-import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 
@@ -11,10 +10,10 @@ export default function Create(){
     function sendtoHome(){
         mover(`/`);
     }
-    function calltoAPI(){
+    function calltoAPI(sname, stime,sid){
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        var raw = JSON.stringify({"name":name,"roomid":roomid, "time":createTime, "type":'create'});
+        var raw = JSON.stringify({"name":sname,"roomid":stime, "time":sid, "type":'create'});
       var requestOptions = {
         method: 'POST',
         headers: myHeaders,
@@ -35,7 +34,7 @@ export default function Create(){
         <div><input type="text" placeholder="Enter Room Id" id="id" name="id" minLength={1}></input></div>
         <div><input type="text" placeholder="Enter Name" id="name" name="name" minLength={1}></input></div>
         <div><input type="text" placeholder="Enter Time" id="time" name="time" minLength={7}></input></div>
-        <button onClick={calltoAPI()}>Submit</button>
+        <button onClick={calltoAPI(document.getElementById('name'), document.getElementById('id'), document.getElementById('time'))}>Submit</button>
         <button className="red-button" onClick={sendtoHome} >Return Home</button>
       </div>
     
