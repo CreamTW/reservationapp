@@ -4,10 +4,9 @@ import { useNavigate } from "react-router-dom";
 
 export default function Create(){
     const mover = useNavigate();
-
     function sendtoHome(){
         mover(`/`);
-    }
+    }; 
     function calltoAPI(sname, stime,sid){
       const [calls, setCalls] = useState([]);
       var myHeaders = new Headers();
@@ -23,7 +22,7 @@ export default function Create(){
       .then(response => response.text())
       .then(result => alert(JSON.parse(result).body))
       .catch(error => console.log('error', error));
-  }
+  };
 
     return(
       <div className="background">
