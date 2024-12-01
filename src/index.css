@@ -1,3 +1,5 @@
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -32,4 +34,11 @@
 }
 .box:nth-child(3n + 3) {
   grid-column: 3;
+}
+.background{
+  background-size: auto;
+  background-color: darkgrey;
+}
+body{
+  background-color: antiquewhite;
 }

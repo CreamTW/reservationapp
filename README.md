@@ -1,6 +1,6 @@
-# React + Vite
+# Hunter's Reservation App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple reservation app that is connect to an aws amplify server
 
 Currently, two official plugins are available:
 
