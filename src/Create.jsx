@@ -31,7 +31,7 @@ export default function Create(){
         <div><input type="text" placeholder="Enter Room Id" id="id" name="id" minLength={1}></input></div>
         <div><input type="text" placeholder="Enter Name" id="name" name="name" minLength={1}></input></div>
         <div><input type="text" placeholder="Enter Time" id="time" name="time" minLength={7}></input></div>
-        <button onClick={calltoAPI(document.getElementById('name'), document.getElementById('id'), document.getElementById('time'))}>Submit</button>
+        <button onClick={calltoAPI(document.getElementById('name').value, document.getElementById('id').value, document.getElementById('time').value)}>Submit</button>
         <button className="red-button" onClick={sendtoHome} >Return Home</button>
       </div>
     
