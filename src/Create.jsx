@@ -21,7 +21,7 @@ export default function Create(){
         body: raw,
         redirect: 'follow'
     };
-      fetch("https://obvveyi590.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
+      fetch("https://p0e8m1xzi3.execute-api.us-east-1.amazonaws.com/dev", requestOptions)
       .then(response => response.text())
       .then(result => alert(JSON.parse(result).body))
       .catch(error => console.log('error', error));
