@@ -21,9 +21,9 @@ function Home() {
       
         <div className="background">
             <h1 className="header mb-32">Hunter's Party Room Reservations</h1>
-            <button onClick={sendToCreate} >Create a Reservation</button>
-            <button onClick={sendToCheck} >Check a Reservation</button>
-            <button onClick={sendToRemove} >Remove a Reservation</button>
+            <div><button onClick={sendToCreate} >Create a Reservation</button></div>
+            <div><button onClick={sendToCheck} >Check a Reservation</button></div>
+            <div><button onClick={sendToRemove} >Remove a Reservation</button></div>
         </div>
     )
 }

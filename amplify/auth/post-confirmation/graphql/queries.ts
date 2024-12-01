@@ -11,9 +11,12 @@ type GeneratedQuery<InputType, OutputType> = string & {
 export const getUserProfile = /* GraphQL */ `query GetUserProfile($id: ID!) {
   getUserProfile(id: $id) {
     createdAt
-    email
+    date
     id
+    name
     profileOwner
+    roomid
+    time
     updatedAt
     __typename
   }
@@ -30,9 +33,12 @@ export const listUserProfiles = /* GraphQL */ `query ListUserProfiles(
   listUserProfiles(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
       createdAt
-      email
+      date
       id
+      name
       profileOwner
+      roomid
+      time
       updatedAt
       __typename
     }

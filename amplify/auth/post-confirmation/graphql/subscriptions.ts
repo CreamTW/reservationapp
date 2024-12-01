@@ -14,9 +14,12 @@ export const onCreateUserProfile = /* GraphQL */ `subscription OnCreateUserProfi
 ) {
   onCreateUserProfile(filter: $filter, profileOwner: $profileOwner) {
     createdAt
-    email
+    date
     id
+    name
     profileOwner
+    roomid
+    time
     updatedAt
     __typename
   }
@@ -31,9 +34,12 @@ export const onDeleteUserProfile = /* GraphQL */ `subscription OnDeleteUserProfi
 ) {
   onDeleteUserProfile(filter: $filter, profileOwner: $profileOwner) {
     createdAt
-    email
+    date
     id
+    name
     profileOwner
+    roomid
+    time
     updatedAt
     __typename
   }
@@ -48,9 +54,12 @@ export const onUpdateUserProfile = /* GraphQL */ `subscription OnUpdateUserProfi
 ) {
   onUpdateUserProfile(filter: $filter, profileOwner: $profileOwner) {
     createdAt
-    email
+    date
     id
+    name
     profileOwner
+    roomid
+    time
     updatedAt
     __typename
   }

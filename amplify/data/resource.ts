@@ -6,8 +6,10 @@ const schema = a
     UserProfile: a
       .model({
         name: a.string(),
+        roomid: a.string(),
         profileOwner: a.string(),
         date: a.date(),
+        time: a.string(),
       })
       .authorization((allow) => [
         allow.ownerDefinedIn("profileOwner"),

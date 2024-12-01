@@ -5,20 +5,26 @@
 export type UserProfile = {
   __typename: "UserProfile",
   createdAt: string,
-  email?: string | null,
+  date?: string | null,
   id: string,
+  name?: string | null,
   profileOwner?: string | null,
+  roomid?: string | null,
+  time?: string | null,
   updatedAt: string,
 };
 
 export type ModelUserProfileFilterInput = {
   and?: Array< ModelUserProfileFilterInput | null > | null,
   createdAt?: ModelStringInput | null,
-  email?: ModelStringInput | null,
+  date?: ModelStringInput | null,
   id?: ModelIDInput | null,
+  name?: ModelStringInput | null,
   not?: ModelUserProfileFilterInput | null,
   or?: Array< ModelUserProfileFilterInput | null > | null,
   profileOwner?: ModelStringInput | null,
+  roomid?: ModelStringInput | null,
+  time?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
 };
 
@@ -87,17 +93,23 @@ export type ModelUserProfileConnection = {
 export type ModelUserProfileConditionInput = {
   and?: Array< ModelUserProfileConditionInput | null > | null,
   createdAt?: ModelStringInput | null,
-  email?: ModelStringInput | null,
+  date?: ModelStringInput | null,
+  name?: ModelStringInput | null,
   not?: ModelUserProfileConditionInput | null,
   or?: Array< ModelUserProfileConditionInput | null > | null,
   profileOwner?: ModelStringInput | null,
+  roomid?: ModelStringInput | null,
+  time?: ModelStringInput | null,
   updatedAt?: ModelStringInput | null,
 };
 
 export type CreateUserProfileInput = {
-  email?: string | null,
+  date?: string | null,
   id?: string | null,
+  name?: string | null,
   profileOwner?: string | null,
+  roomid?: string | null,
+  time?: string | null,
 };
 
 export type DeleteUserProfileInput = {
@@ -105,18 +117,24 @@ export type DeleteUserProfileInput = {
 };
 
 export type UpdateUserProfileInput = {
-  email?: string | null,
+  date?: string | null,
   id: string,
+  name?: string | null,
   profileOwner?: string | null,
+  roomid?: string | null,
+  time?: string | null,
 };
 
 export type ModelSubscriptionUserProfileFilterInput = {
   and?: Array< ModelSubscriptionUserProfileFilterInput | null > | null,
   createdAt?: ModelSubscriptionStringInput | null,
-  email?: ModelSubscriptionStringInput | null,
+  date?: ModelSubscriptionStringInput | null,
   id?: ModelSubscriptionIDInput | null,
+  name?: ModelSubscriptionStringInput | null,
   or?: Array< ModelSubscriptionUserProfileFilterInput | null > | null,
   profileOwner?: ModelStringInput | null,
+  roomid?: ModelSubscriptionStringInput | null,
+  time?: ModelSubscriptionStringInput | null,
   updatedAt?: ModelSubscriptionStringInput | null,
 };
 
@@ -158,9 +176,12 @@ export type GetUserProfileQuery = {
   getUserProfile?:  {
     __typename: "UserProfile",
     createdAt: string,
-    email?: string | null,
+    date?: string | null,
     id: string,
+    name?: string | null,
     profileOwner?: string | null,
+    roomid?: string | null,
+    time?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -177,9 +198,12 @@ export type ListUserProfilesQuery = {
     items:  Array< {
       __typename: "UserProfile",
       createdAt: string,
-      email?: string | null,
+      date?: string | null,
       id: string,
+      name?: string | null,
       profileOwner?: string | null,
+      roomid?: string | null,
+      time?: string | null,
       updatedAt: string,
     } | null >,
     nextToken?: string | null,
@@ -195,9 +219,12 @@ export type CreateUserProfileMutation = {
   createUserProfile?:  {
     __typename: "UserProfile",
     createdAt: string,
-    email?: string | null,
+    date?: string | null,
     id: string,
+    name?: string | null,
     profileOwner?: string | null,
+    roomid?: string | null,
+    time?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -211,9 +238,12 @@ export type DeleteUserProfileMutation = {
   deleteUserProfile?:  {
     __typename: "UserProfile",
     createdAt: string,
-    email?: string | null,
+    date?: string | null,
     id: string,
+    name?: string | null,
     profileOwner?: string | null,
+    roomid?: string | null,
+    time?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -227,9 +257,12 @@ export type UpdateUserProfileMutation = {
   updateUserProfile?:  {
     __typename: "UserProfile",
     createdAt: string,
-    email?: string | null,
+    date?: string | null,
     id: string,
+    name?: string | null,
     profileOwner?: string | null,
+    roomid?: string | null,
+    time?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -243,9 +276,12 @@ export type OnCreateUserProfileSubscription = {
   onCreateUserProfile?:  {
     __typename: "UserProfile",
     createdAt: string,
-    email?: string | null,
+    date?: string | null,
     id: string,
+    name?: string | null,
     profileOwner?: string | null,
+    roomid?: string | null,
+    time?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -259,9 +295,12 @@ export type OnDeleteUserProfileSubscription = {
   onDeleteUserProfile?:  {
     __typename: "UserProfile",
     createdAt: string,
-    email?: string | null,
+    date?: string | null,
     id: string,
+    name?: string | null,
     profileOwner?: string | null,
+    roomid?: string | null,
+    time?: string | null,
     updatedAt: string,
   } | null,
 };
@@ -275,9 +314,12 @@ export type OnUpdateUserProfileSubscription = {
   onUpdateUserProfile?:  {
     __typename: "UserProfile",
     createdAt: string,
-    email?: string | null,
+    date?: string | null,
     id: string,
+    name?: string | null,
     profileOwner?: string | null,
+    roomid?: string | null,
+    time?: string | null,
     updatedAt: string,
   } | null,
 };

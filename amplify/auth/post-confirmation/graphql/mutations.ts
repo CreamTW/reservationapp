@@ -14,9 +14,12 @@ export const createUserProfile = /* GraphQL */ `mutation CreateUserProfile(
 ) {
   createUserProfile(condition: $condition, input: $input) {
     createdAt
-    email
+    date
     id
+    name
     profileOwner
+    roomid
+    time
     updatedAt
     __typename
   }
@@ -31,9 +34,12 @@ export const deleteUserProfile = /* GraphQL */ `mutation DeleteUserProfile(
 ) {
   deleteUserProfile(condition: $condition, input: $input) {
     createdAt
-    email
+    date
     id
+    name
     profileOwner
+    roomid
+    time
     updatedAt
     __typename
   }
@@ -48,9 +54,12 @@ export const updateUserProfile = /* GraphQL */ `mutation UpdateUserProfile(
 ) {
   updateUserProfile(condition: $condition, input: $input) {
     createdAt
-    email
+    date
     id
+    name
     profileOwner
+    roomid
+    time
     updatedAt
     __typename
   }

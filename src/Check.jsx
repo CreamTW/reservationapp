@@ -17,14 +17,25 @@ import { useNavigate } from "react-router-dom";
 
 export default function Check(){
     const mover = useNavigate();  
+    const mainId = document.getElementById("id"); 
 
     function sendtoHome(){
         mover(`/`);
     }
+
+    function calltoAPI(){
+
+    }
     return(
       <div className="background">
         <h1>Checking your Reservation</h1>
+        <input type="text" placeholder="Enter Id" id="id" name="id" minLength={1}></input>
+        <div>
+        <button onClick={calltoAPI}>Submit</button>
+      </div>
+      <div>  
         <button className="red-button" onClick={sendtoHome} >Return Home</button>
+      </div>
       </div>
     
     )
