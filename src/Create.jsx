@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 
 export default function Create(){
     const mover = useNavigate();
-    const name = document.getElementById("name");
-    const createTime = document.getElementById("time");
-    const roomid = document.getElementById("id");
 
     function sendtoHome(){
         mover(`/`);
@@ -13,7 +10,7 @@ export default function Create(){
     function calltoAPI(sname, stime,sid){
         var myHeaders = new Headers();
         myHeaders.append("Content-Type", "application/json");
-        var raw = JSON.stringify({"name":sname,"roomid":stime, "time":sid, "type":'create'});
+        var raw = JSON.stringify({"type":"create", "id":null, "roomid":stime, "name":sname, "time":sid });
       var requestOptions = {
         method: 'POST',
         headers: myHeaders,
